@@ -1,0 +1,128 @@
+:root {
+  /* Color */
+  --orange-bright-color: hsl(31, 77%, 52%);
+  --cyan-dark: hsl(184, 100%, 22%);
+  --cyan-very-dark: hsl(179, 100%, 13%);
+  --gray-very-light: hsl(0, 0%, 95%);
+  --white-transparent: hsla(0, 0%, 100%, 0.75);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--gray-very-light);
+}
+
+button {
+  padding: 15px 25px;
+  border-style: none;
+  border-radius: 45px;
+  background-color: var(--gray-very-light);
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+button:hover {
+  border: 2px solid var(--gray-very-light);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+}
+
+.container > section {
+  padding: 40px;
+  height: 400px;
+}
+
+.component1 {
+  background-color: var(--orange-bright-color);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.component1 > button {
+  color: var(--orange-bright-color);
+}
+
+.component1 > button:hover {
+  color: var(--gray-very-light);
+  background-color: var(--orange-bright-color);
+}
+
+.component2 {
+  background-color: var(--cyan-dark);
+}
+
+.component2 > button {
+  color: var(--cyan-dark);
+}
+
+.component2 > button:hover {
+  color: var(--gray-very-light);
+  background-color: var(--cyan-dark);
+}
+
+.component3 {
+  background-color: var(--cyan-very-dark);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.component3 > button {
+  color: var(--cyan-very-dark);
+}
+
+.component3 > button:hover {
+  color: var(--gray-very-light);
+  background-color: var(--cyan-very-dark);
+}
+
+.title {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: var(--gray-very-light);
+  padding: 25px 0;
+}
+
+.contents {
+  margin: 0;
+  height: 210px;
+  color: var(--white-transparent);
+  line-height: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: auto;
+    margin: 50px 10px;
+  }
+
+  .container > section {
+    height: max-content;
+  }
+
+  .component1 {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  .component3 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .contents {
+    height: 150px;
+  }
+}
